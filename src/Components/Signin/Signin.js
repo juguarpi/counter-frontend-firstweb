@@ -11,7 +11,7 @@ class Signin extends Component {
     const {signinStatusChange,setNameEmail, setCounters} = this.props;
     const email = document.getElementById("inputEmailS").value;
     const password = document.getElementById("inputPasswordS").value; 
-    console.log("backend URL", process.env.BACKEND_URL);
+    console.log("backend URL", process.env.REACT_APP_BACKEND_URL);
     fetch('https://counter-backend-firstweb.herokuapp.com/signin', {
         method: 'POST',
         headers: {
