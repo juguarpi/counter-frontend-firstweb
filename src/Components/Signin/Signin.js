@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './Signin.css'
+import './Signin.css';
+
 
 class Signin extends Component {
     state = { 
@@ -10,7 +11,8 @@ class Signin extends Component {
     const {signinStatusChange,setNameEmail, setCounters} = this.props;
     const email = document.getElementById("inputEmailS").value;
     const password = document.getElementById("inputPasswordS").value; 
-    fetch('http://localhost:3001/signin', {
+    console.log("backend URL", process.env.BACKEND_URL);
+    fetch('https://counter-backend-firstweb.herokuapp.com/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -19,7 +21,7 @@ class Signin extends Component {
         body: JSON.stringify({email: email, password:password}) // body data type must match "Content-Type" header
       })
       .then(response => {
-        if (response.status !=200) {
+        if (response.status !==200) {
            response.json()
            .then(message=> {
             this.setState({signInMessage:message})})

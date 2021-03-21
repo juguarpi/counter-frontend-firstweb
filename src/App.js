@@ -5,6 +5,7 @@ import Navigation from './Components/Navigation/Navigation';
 import Register from './Components/Register/Register';
 import Signin from './Components/Signin/Signin';
 
+
 class App extends Component {
   state = { 
     signinStatus: false,
@@ -65,7 +66,7 @@ class App extends Component {
   }
 
   setCounters = () =>{
-      fetch('http://localhost:3001/getcounters', {
+      fetch('https://counter-backend-firstweb.herokuapp.com/getcounters', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

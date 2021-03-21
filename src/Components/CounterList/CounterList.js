@@ -7,7 +7,7 @@ class CounterList extends Component {
 
     updateCounter=(counter, newCounter)=>{
         const {setCounters} = this.props;
-        fetch('http://localhost:3001/updatecounter', {
+        fetch('https://counter-backend-firstweb.herokuapp.com/updatecounter', {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json'
