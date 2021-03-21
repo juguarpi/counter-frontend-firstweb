@@ -66,7 +66,7 @@ class App extends Component {
   }
 
   setCounters = () =>{
-      fetch('https://counter-backend-firstweb.herokuapp.com/getcounters', {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/getcounters`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -9,7 +9,7 @@ class Register extends Component {
         const name = document.getElementById("inputNameR").value;
         const email = document.getElementById("inputEmailR").value;
         const password = document.getElementById("inputPasswordR").value; 
-        fetch('https://counter-backend-firstweb.herokuapp.com/register', {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/register`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

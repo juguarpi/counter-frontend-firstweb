@@ -12,7 +12,7 @@ class Signin extends Component {
     const email = document.getElementById("inputEmailS").value;
     const password = document.getElementById("inputPasswordS").value; 
     console.log("backend URL", process.env.REACT_APP_BACKEND_URL);
-    fetch('https://counter-backend-firstweb.herokuapp.com/signin', {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/signin`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
