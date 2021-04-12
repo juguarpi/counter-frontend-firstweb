@@ -18,7 +18,7 @@ class Navigation extends Component {
                 <div className="row">
                     <div className="col-sm" href="#">
                         <img src={Logo} width="80" height="40" className="d-inline-block align-top" alt=""/>
-                        <h3 className="d-inline" >COUNTER 1.5 </h3>
+                        <h3 className="d-inline" >COUNTER 1.6 </h3>
                     </div>
                     <div className ="col-sm text-right align-middle h6" >
                     { (signinStatus)?
